@@ -7,7 +7,7 @@
 <script src='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.js'></script>
 <link href='https://api.mapbox.com/mapbox-gl-js/v2.2.0/mapbox-gl.css' rel='stylesheet' />
 </head>
-  
+
 <div class='map-overlay' id='features'>
 <div class='map-overlay' id='legend'></div>
 
@@ -18,12 +18,11 @@
     container: 'map',
     style: 'mapbox://styles/awadmisha/cknewdn881ofr17o7kz315od2'
   });
-</script> 
-  
+</script>
+
 <body>
 <style>
 .legend {
-background-color: #fff;
 border-radius: 3px;
 bottom: 30px;
 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -33,11 +32,11 @@ position: absolute;
 right: 10px;
 z-index: 1;
 }
- 
+
 .legend h4 {
 margin: 0 0 10px;
 }
- 
+
 .legend div span {
 border-radius: 50%;
 display: inline-block;
@@ -46,13 +45,13 @@ margin-right: 5px;
 width: 10px;
 }
 </style>
-  
+
  <div id="residency-legend" class="legend">
 <h4>Residency</h4>
 <div><span style="background-color: #723122"></span>from</div>
 <div><span style="background-color: #8b4225"></span>to</div>
 </div>
- 
+
 <div id="migration-legend" class="legend" style="display: none">
 <h4>Migration</h4>
 <div><span style="background-color: #723122"></span>1,000,000</div>
@@ -65,7 +64,7 @@ width: 10px;
 <div><span style="background-color: #eed322"></span>100</div>
 <div><span style="background-color: #f2f12d"></span>0</div>
 </div>
- 
+
 <script>
   map.on('load', function () {
     var layers = map.getStyle().layers;
@@ -77,7 +76,7 @@ width: 10px;
     break;
   }
 }
-    
+
 map.addSource('Douglas', {
 type: 'vector',
 url: 'awadmisha.ckn3f0num1qs422mp3w796ziz-37dey'
@@ -87,7 +86,7 @@ map.addLayer({
 'type': 'circle',
 'source': 'homeowner',
 'source-layer': 'homeowner',
-'paint': {        
+'paint': {
 // make circles larger as the user zooms from z12 to z22
 'circle-radius': {
 'base': 1.75,
@@ -110,7 +109,6 @@ map.addLayer({
 });
 });
 </script>
- 
+
 </body>
 </html>
-  
